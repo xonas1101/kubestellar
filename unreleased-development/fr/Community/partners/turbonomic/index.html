@@ -4128,15 +4128,17 @@
 <h3 id="turbonomic-and-kubestellar-demo-day">Turbonomic and KubeStellar Demo Day<a class="headerlink" href="#turbonomic-and-kubestellar-demo-day" title="Permanent link">#</a></h3>
 <p align=center>
 <div id="spinner1">
-  <img width="140" height="140" src="../../../images/spinner.gif" class="centerImage">
+  <img alt="Spinner" width="140" height="140" src="../../../images/spinner.gif" class="centerImage">
 </div>
 <iframe class="centerImage" id="embed1" width="0" height="0" src="https://www.youtube.com/embed/B3jZTnu1LDo?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="visibility:hidden;" onload= "document.getElementById('spinner1').style.display='none';document.getElementById('embed1').style.visibility='visible';document.getElementById('embed1').width='720';document.getElementById('embed1').height='400';"></iframe>
 </p>
 
 <h3 id="how-do-i-get-this-working-with-my-kubestellar-instance">How do I get this working with my KubeStellar instance?<a class="headerlink" href="#how-do-i-get-this-working-with-my-kubestellar-instance" title="Permanent link">#</a></h3>
-<p>As we can see from the blog and the demo, Turbonomic talks to KubeStellar via GitOps. The scheduling decisions are passed from Turbonomic to KubeStellar in two steps:
-1. Turbo -&gt; GitHub repository.
-2. GitHub repository -&gt; KubeStellar.</p>
+<p>As we can see from the blog and the demo, Turbonomic talks to KubeStellar via GitOps. The scheduling decisions are passed from Turbonomic to KubeStellar in two steps:</p>
+<ol>
+<li>Turbo -&gt; GitHub repository.</li>
+<li>GitHub repository -&gt; KubeStellar.</li>
+</ol>
 <p>For the first step (Turbonomic -&gt; GitHub repository), a controller named "<a href="https://github.com/irfanurrehman/change-reconciler">change reconciler</a>" creates PRs against the GitHub repository, where the PRs contains changes to scheduling decisions.</p>
 <p>There's also <a href="https://github.com/edge-experiments/turbonomic-integrations">a piece of code</a> which intercepts Turbonomic actions and creates CRs for the above change reconciler.</p>
 <p>For the second step (GitHub repository-&gt; KubeStellar), we can use Argo CD. The detailed procedure to integrate Argo CD with KubeStellar is documented <a href="../argocd/">here</a>.</p>
@@ -4144,7 +4146,7 @@
 <h3 id="turbonomic-and-kubestellar-in-the-news">Turbonomic and KubeStellar in the news<a class="headerlink" href="#turbonomic-and-kubestellar-in-the-news" title="Permanent link">#</a></h3>
 <p align=center>
 <div id="spinner2">
-    <img width="140" height="140" src="../../../images/spinner.gif" class="centerImage">
+    <img alt="Spinner" width="140" height="140" src="../../../images/spinner.gif" class="centerImage">
 </div>
 <iframe class="centerImage" id="embed2" src="https://www.linkedin.com/embed/feed/update/urn:li:share:7066466334334668800" scrolling=no height="0" width="0" frameborder="0" allowfullscreen="" title="Embedded post" style="visibility:hidden;" onload= "document.getElementById('spinner2').style.display='none';document.getElementById('embed2').style.visibility='visible';document.getElementById('embed2').width='740';document.getElementById('embed2').height='400';"></iframe>
 </p>
